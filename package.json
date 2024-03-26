@@ -1,0 +1,26 @@
+{
+  "name": "assignment1",
+  "version": "1.0.0",
+  "description": "Assignment 1 for WAD1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ritchie-Robinson/assignment1.git"
+  },
+  "keywords": [
+    "Ritchie",
+    "Robinson"
+  ],
+  "author": "Ritchie Robinson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ritchie-Robinson/assignment1/issues"
+  },
+  "homepage": "https://github.com/Ritchie-Robinson/assignment1#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
