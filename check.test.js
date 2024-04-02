@@ -7,15 +7,23 @@ describe('Answer check function', () => {
         expect(check('balances', 240, 0)).toBe(true);
     })
 
-    //if key found but wrong answer
-    test('if questionKey exists, equal true', () => {
-        expect(check('balances', 100, 100)).toBe(false);
-    })
-
     //if key not found
     test('if questionKey not found', () => {
         expect(check('eevevw', 100, 100)).toBe('no such key');
     })
-  
+
+    //if key found but wrong answer
+    test('if questionKey exists but wrong inputs', () => {
+        expect(check('balances', 100, 100)).toBe('incorrect input values');
+    });
+    
+    //if not number values
+    test('if not a number', () => {
+        expect(check('balances', 'a', 'b')).toBe('not a number');
+    });
+    test('if NULL values', () => {
+        expect(check('balances', null, null)).toBe('not a number');
+    });
+    
   });
   
