@@ -9,9 +9,21 @@ function check(questionKey, userTop, userLeft) {
         const correctAnswer = data[questionKey].questions.fullquestion.answer.find(answer => answer.correct === true);
 
         if (userTop === correctAnswer.top && userLeft === correctAnswer.left) {
+            
             // return true if user's answer is correct
             return correctAnswer.correct;
-        } else {
+
+        } else if (typeof userTop !== 'number' && typeof userLeft !== 'number') {
+
+            //not a number
+            return 'not a number';
+
+        } else if (userTop !== correctAnswer.top || userLeft !== correctAnswer.left) {
+            
+            // input values incorrect
+            return 'incorrect input values';
+
+        }  else {
             return false;
         }
 
