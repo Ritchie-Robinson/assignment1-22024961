@@ -1,11 +1,15 @@
 #ignore specific file
 package-lock.json
 
+# System files
+.DS_Store
+Thumbs.db
+
 #ignore entire directory
 node_modules/
 
 #ignore all files with a particular extension
-# *.log
+*.log
 
 #ignore all files in this directory
 # foldername/*
