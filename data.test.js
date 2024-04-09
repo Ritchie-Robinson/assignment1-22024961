@@ -29,12 +29,31 @@ describe('Data Load', () => {
       fail('No matching questionKey found for URL');
     });
 
+    
 
     // check there is a full question
     test('There should be a full question to display', () => {
       expect(data.balances.questions.fullquestion.question).toBeDefined();
     });
+
+    //is there an array of answers
+    test('Answer array present', () => {
+      expect(data.balances.questions.fullquestion.answer).toBeDefined();
+    });
     
+    //check that there is at least 1 correct answer true
+    test('At least 1 true/correct answer present', () => {
+      //get the answers array first, as checked in above test
+      //'?' optional chaining a bit pointless here as we know from above test they exist
+      //however, added for good practice as do not want test to fail based on anything 
+      //but a correct answer not being present. Hence why optional chaining not used in previous test
+      const answers = data.balances?.questions?.fullquestion?.answer;
+
+      //check at least 1 answer is present in array
+      const isCorrect = answers.some(answer => answer.correct === true);
+      expect(isCorrect).toBe(true);
+    })
+
   
 });
 
