@@ -53,7 +53,7 @@ describe('Data Load', () => {
       //check at least 1 answer is present in array
       const isCorrect = answers.some(answer => answer.correct === true);
       expect(isCorrect).toBe(true);
-    })
+    });
 
   
 });
