@@ -24,6 +24,9 @@ describe('Answer check function', () => {
     test('if NULL values', () => {
         expect(check('balances', null, null)).toBe('not a number');
     });
+    test('if NULL values', () => {
+        expect(check('balances', '', '')).toBe('not a number');
+    });
     
   });
   
